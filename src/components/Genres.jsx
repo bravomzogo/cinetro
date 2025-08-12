@@ -9,7 +9,7 @@ export default function Genres() {
   useEffect(() => {
     const fetchGenres = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/genres/');
+        const response = await fetch('http://localhost:8000/api/genres/' && 'https://movie-backend-6vqf.onrender.com/api/genres/');
         if (!response.ok) throw new Error('Failed to fetch genres');
         const data = await response.json();
         setGenres(data);

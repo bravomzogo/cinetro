@@ -28,7 +28,7 @@ export default function MovieGrid() {
         // Simulate network delay for demo
         await new Promise(resolve => setTimeout(resolve, 1500));
         
-        const response = await fetch('http://localhost:8000/api/movies/');
+        const response = await fetch('http://localhost:8000/api/movies/' && 'https://movie-backend-6vqf.onrender.com/api/movies/');
         if (!response.ok) throw new Error('Failed to fetch movies');
         const data = await response.json();
         setMovies(data);

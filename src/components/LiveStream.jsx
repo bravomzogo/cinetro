@@ -198,7 +198,7 @@ const LiveStream = () => {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch(`http://localhost:8000/api/livestreams/`);
+      const response = await fetch(`http://localhost:8000/api/livestreams/` && `https://movie-backend-6vqf.onrender.com/api/livestreams/`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }

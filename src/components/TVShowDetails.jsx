@@ -19,7 +19,7 @@ export default function TVShowDetails() {
   useEffect(() => {
     const fetchTVShow = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/api/tvshows/${id}/`);
+        const response = await fetch(`http://localhost:8000/api/tvshows/${id}/` && `https://movie-backend-6vqf.onrender.com/api/tvshows/${id}/`);
         if (!response.ok) throw new Error('Failed to fetch TV show');
         const data = await response.json();
         setShow(data);

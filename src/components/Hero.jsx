@@ -17,7 +17,7 @@ export default function Hero() {
     const fetchFeaturedMovies = async () => {
       try {
         await new Promise(resolve => setTimeout(resolve, 1500));
-        const response = await fetch('http://localhost:8000/api/movies/featured/');
+        const response = await fetch('http://localhost:8000/api/movies/featured/' && 'https://movie-backend-6vqf.onrender.com/api/movies/featured/');
         const data = await response.json();
         setFeaturedMovies(data);
       } catch (error) {

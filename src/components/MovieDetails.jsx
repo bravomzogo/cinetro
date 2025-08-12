@@ -17,7 +17,7 @@ export default function MovieDetails() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/api/movies/${id}/`);
+        const response = await fetch(`http://localhost:8000/api/movies/${id}/` && `https://movie-backend-6vqf.onrender.com/api/movies/${id}/`);
         if (!response.ok) throw new Error('Failed to fetch movie');
         const data = await response.json();
         setMovie(data);

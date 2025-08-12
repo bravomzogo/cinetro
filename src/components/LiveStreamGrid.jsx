@@ -11,7 +11,7 @@ export default function LiveStreamGrid() {
   useEffect(() => {
     const fetchStreams = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/livestreams/');
+        const response = await fetch('http://localhost:8000/api/livestreams/' && 'https://movie-backend-6vqf.onrender.com/api/livestreams/');
         if (!response.ok) throw new Error('Failed to fetch live streams');
         const data = await response.json();
         setStreams(data);

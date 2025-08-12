@@ -13,7 +13,7 @@ export default function TVShowGrid() {
   useEffect(() => {
     const fetchTVShows = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/tvshows/');
+        const response = await fetch('http://localhost:8000/api/tvshows/' && 'https://movie-backend-6vqf.onrender.com/api/tvshows/');
         if (!response.ok) throw new Error('Failed to fetch TV shows');
         const data = await response.json();
         setTVShows(data);

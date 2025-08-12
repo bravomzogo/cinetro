@@ -11,7 +11,7 @@ export default function SearchResults() {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/api/search/?q=${encodeURIComponent(query)}`);
+        const response = await fetch(`http://localhost:8000/api/search/?q=${encodeURIComponent(query)}` && `https://movie-backend-6vqf.onrender.com/api/search/?q=${encodeURIComponent(query)}`);
         if (!response.ok) throw new Error('Failed to fetch search results');
         const data = await response.json();
         setResults(data.results);
